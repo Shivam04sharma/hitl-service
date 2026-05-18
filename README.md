@@ -71,7 +71,7 @@ Monitor all HITL events with live analytics:
          │
          ▼
 ┌─────────────────┐      ┌──────────────────┐
-│  HITL Service   │─────▶│  Vertex AI       │
+│  HITL Service   │─────▶│      KEY        │
 │  (FastAPI)      │      │  (Gemini Models) │
 └────────┬────────┘      └──────────────────┘
          │
@@ -85,7 +85,7 @@ Monitor all HITL events with live analytics:
 **Key Components:**
 - **FastAPI Backend**: Async REST API with background task processing
 - **PostgreSQL**: Event storage with JSONB metadata
-- **Vertex AI**: Google Gemini models for chat responses
+- **google Api**: Google Gemini models for chat responses
 - **Modern UI**: Glassmorphism design with typing animations
 
 ---
@@ -95,7 +95,7 @@ Monitor all HITL events with live analytics:
 ### Prerequisites
 - Python 3.11+
 - Docker & Docker Compose
-- Google Cloud account (for Vertex AI)
+- Google Cloud account (for google api)
 
 ### 1️⃣ Clone Repository
 ```bash
@@ -109,11 +109,7 @@ cp .env.example .env.local
 # Edit .env.local with your credentials
 ```
 
-**Required Configuration:**
-```env
-VERTEX_AI_PROJECT_ID=your-google-cloud-project
-GOOGLE_APPLICATION_CREDENTIALS=./google-credentials.json
-```
+
 
 ### 3️⃣ Add Google Cloud Credentials
 Place your `google-credentials.json` file in the project root.
@@ -211,7 +207,7 @@ hitl-service/
 |----------|-----------|
 | **Backend** | FastAPI, Python 3.11, SQLAlchemy (async) |
 | **Database** | PostgreSQL 15 with JSONB |
-| **AI/ML** | Google Vertex AI (Gemini 2.0 Flash, Gemini 1.5 Pro) |
+| **AI/ML** | Google api key (Gemini 2.0 Flash, Gemini 1.5 Pro) |
 | **Frontend** | Vanilla JavaScript, HTML5, CSS3 |
 | **DevOps** | Docker, Docker Compose |
 | **Logging** | Structlog |
@@ -385,7 +381,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
+- GitHub: [@yourusername](https://github.com/shivam)
 - LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
 
 ---
@@ -393,7 +389,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - FastAPI for the amazing web framework
-- Google Cloud for Vertex AI
+- Google Cloud for google api
 - PostgreSQL for reliable data storage
 - The open-source community
 
